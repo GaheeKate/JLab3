@@ -71,7 +71,7 @@ app.get("/admin/menu/delete", async (request, response) => {
 
 app.post("/admin/menu/edit/submit", async (request, response) => {
   //get the id
-  let idFilter = { _id: new ObjectId(request.query.linkId) };
+  let idFilter = { _id: new ObjectId(request.body.linkId) };
   //get the weight/path/name values from the form and use for a document to update
   let link = {
     weight: request.body.editWeight,
